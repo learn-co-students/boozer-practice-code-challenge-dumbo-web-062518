@@ -1,11 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Input } from 'semantic-ui-react';
 
-export default class SearchBar extends Component {
-
-  render() {
+const SearchBar = ({value, handleInputChange}) => {
     return (
-      <div></div>
-    )
-  }
-
+      <div>
+        <label for="search">Search:
+        <Input id="search" value={value}
+        onChange={e => handleInputChange(e)}
+        />
+        </label>
+      </div>
+    );
 };
+
+export default SearchBar;

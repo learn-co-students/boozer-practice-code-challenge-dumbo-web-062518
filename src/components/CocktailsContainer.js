@@ -23,6 +23,7 @@ class CocktailsContainer extends Component {
   }
 
   handleSearchTerm = e => {
+    console.log(e.target.value)
     const searchTerm = e.target.value;
     this.setState({
       searchTerm
